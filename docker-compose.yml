@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  ingestion:
+    build: ./ingestion_service
+    ports:
+      - "8000:8000"
+    environment:
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET:-changeme}
+      - INGEST_DB_PATH=/data/expenses.db
+      - WEBHOOK_MAX_AGE=${WEBHOOK_MAX_AGE:-300}
+      - WEBHOOK_RATE_LIMIT=${WEBHOOK_RATE_LIMIT:-60}
+      - WEBHOOK_RATE_WINDOW=${WEBHOOK_RATE_WINDOW:-60}
+    volumes:
+      - ./ingestion_service/data:/data
+    restart: unless-stopped

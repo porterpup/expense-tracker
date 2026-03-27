@@ -1,0 +1,740 @@
+{
+  "generated_at": "2026-03-27_154426",
+  "results": [
+    {
+      "source": "reddit/openclaw",
+      "title": "My honest take on OpenClaw after extensive testing",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4pgat/my_honest_take_on_openclaw_after_extensive_testing/",
+      "score": 5,
+      "excerpt": "Alright, here\u2019s my take on OpenClaw after spending countless hours testing both paid and open-source models. \n\nI\u2019ve watched all the YouTube content, followed the \u201cgurus\u201d, and seen the claims of people building fully autonomous businesses generating serious revenue with minimal human input.\n\nBefore I get into it, a bit of context I\u2019ve worked with a wide range of AI platforms and run my own Ollama s"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Okay now I get it... But how are you all using it for social media?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s5048u/okay_now_i_get_it_but_how_are_you_all_using_it/",
+      "score": 4,
+      "excerpt": "Initially I installed on a hostinger VPS and ccouldn't get to grips with the set up but recently tried again with a one click instal type agent that runs in the browser. \n\nSo I didnt need to buy a mac mini yet but may just try to get openclaw to make money automonously to buy me one lol. \n\nAnyway, I am running multiple brand accounts on social media across tiktok, youtube &amp; instagram, up to 4 "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Just installed: day 2 - what were some of the most important steps or skills or things you setup?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4wp24/just_installed_day_2_what_were_some_of_the_most/",
+      "score": 4,
+      "excerpt": "just curious what you guys may want to share that's been like a nice result or workflows, i'm looking at some api's but it keeps using browser automation or doing random things like change sequences in apollo but that's not what i've instructed.. i think it just got a brain of it's own"
+    },
+    {
+      "source": "reddit/clawhub",
+      "title": "browsing community skills and spinning up tiny dedicated agents for each one",
+      "url": "https://www.reddit.com/r/clawhub/comments/1rpk0zb/browsing_community_skills_and_spinning_up_tiny/",
+      "score": 3,
+      "excerpt": "Skills, skills everywhere. I thought it might be cool if you could create small dedicated agents to evaluate them, or just to have a specialized agent for a specific domain. A finance agent with a stock analysis skill. A marketing agent with an SEO skill. A support agent that knows your docs. They don't bleed into each other.\n\nSo I made it a curl:\n\n    curl -s -X POST https://api.prompt2bot.com \\\n"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw manages YouTube channels and funny things happen",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s56z6l/openclaw_manages_youtube_channels_and_funny/",
+      "score": 3,
+      "excerpt": "So I setup OpenClaw server to test the ability of creating YouTube simple content and its managing skills.\n\nThings went well, I have video generated daily at certain times. OpenClaw and the agents do everything from choosing topics, generating script, creating voiceover, thumbnails, video effects and also uploading and scheduling the video.\n\nToday, someone setup their comment bot to one of my vide"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "3 OpenClaw Skills I\u2019d Install First in 2026 (If I Had to Start Over)",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4sbba/3_openclaw_skills_id_install_first_in_2026_if_i/",
+      "score": 3,
+      "excerpt": "Stop installing random OpenClaw skills.\n\nSeriously \u2014 that\u2019s how beginners get cooked.\n\nTested it, here\u2019s my take:\n\nIf I had to restart OpenClaw in 2026, I\u2019d install these 3 first \u2014 in this order.\n\n1) A memory fix skill\n\nWhy first:\n\n\\- Most new setups fail because the agent forgets what matters\n\n\\- Good memory compounds over time\n\n\\- It keeps useful learnings in MEMORY.md instead of losing them in "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "I run openclaw and llm router inside vm+k8s with a single command",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4jbqh/i_run_openclaw_and_llm_router_inside_vmk8s_with_a/",
+      "score": 3,
+      "excerpt": "The idea for this project started from concerns about the safety of \u201clittle lobsters\u201d (basically referring to these openclaw like agent systems). Everyone has been talking about how unsafe they are, and suddenly a bunch of new projects popped up claiming that running them in a sandbox makes everything safe. As someone who\u2019s been a programmer for years, that immediately felt unreliable to me. As lo"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "figured this is the architecture mistake that kills most AI agent setups before they even start",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4h3mq/figured_this_is_the_architecture_mistake_that/",
+      "score": 3,
+      "excerpt": "i think most people who build an AI agent setup hit a wall around week 2 or 3.\n\nThe agents are running. The model is responding. But the system feels fragile before you truly realize... one weird input and everything breaks. You end up babysitting it instead of it working for you. And you start wondering if this whole thing is actually worth it.\n\nI went through this. Spent 3 months in trial and er"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Claude Code vs. OpenClaw + DeepSeek V3: Which stack for a local-LLM integrated macOS app?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s49ny3/claude_code_vs_openclaw_deepseek_v3_which_stack/",
+      "score": 3,
+      "excerpt": "Hi everyone,\n\nI\u2019m currently developing a macOS project that features heavy graphics and local LLM integration. I\u2019m at a crossroads regarding my dev stack and would love some expert input.\n\nMy Hardware: MacBook Pro M5 with 24GB Unified Memory.\n\nThe Dilemma: I\u2019m debating whether to invest in Claude Code (using 3.7 Sonnet) or stick with an open-source agentic orchestrator like OpenClaw paired with De"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw Triangle Meetup #2 - April 23 in Cary",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s57q8l/openclaw_triangle_meetup_2_april_23_in_cary/",
+      "score": 2,
+      "excerpt": "We did the first OpenClaw Triangle meetup last month and it turned out really well, so we're doing another one.\n\n\n\nIf you're in the Triangle and into AI agents, personal automation, developer tools, or just curious what people are building with OpenClaw, come by.\n\n\n\nThursday, April 23\n\n6:00-8:30 PM\n\nGamers Geekery &amp; Tavern, Cary\n\n\n\nIt's casual. No formal talks, no sales pitch, no weird network"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "ClaudeFormer: Building a Transformer Out of Claudes \u2014 Collaboration Request",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s57m57/claudeformer_building_a_transformer_out_of/",
+      "score": 2,
+      "excerpt": "I'm looking to work with people interested in math, machine learning, or agentic coding, on creating a multi-agent framework to do frontier math research. My core idea is to build the transformer architecture out of Claudes. FYI this is probably not gonna be published research, but its a really cool idea exploring an analogy.\n\nThe Architecture (Q/K/V Attention)\n\nconcretely, the setup consists of a"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "I built an OpenClaw school that test your agent's IQ and gives it a score",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s57bpe/i_built_an_openclaw_school_that_test_your_agents/",
+      "score": 2,
+      "excerpt": "1,300 users in just 6 hours!\n\nClawvard is a vibe coded openclaw school where your agent takes actual tests, gets evaluated, and receives a full performance report. If your bot is lacking, we recommend specific skills for it to learn so it can improve. Kinda similar to going to school like a real student.\n\nHow it works:\n\n\u2022 The Test: Put your agent through its paces.\n\n\u2022 The Report: Get a detailed br"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "GLM-5.1 is live \u2013 coding ability on par with Claude Opus 4.5",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s564vt/glm51_is_live_coding_ability_on_par_with_claude/",
+      "score": 2,
+      "excerpt": "GLM-5.1, Zhipu AI's latest flagship model, is now available to all Coding Plan users. If you're not familiar with it yet, here's why it's worth knowing about:\n\n**Key benchmarks (March 2026):**\n\n* SWE-bench-Verified: 77.8 pts \u2014 highest score among open-source models\n* Terminal Bench 2.0: 56.2 pts \u2014 also open-source SOTA\n* Beats GPT-4o and approaches Claude Opus 4.5 on coding tasks\n* 200K context wi"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw Blunders",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s54upj/openclaw_blunders/",
+      "score": 2,
+      "excerpt": "Hey everyone\n\nI think I\u2019ve been running of x.com hopium with OpenClaw. Not only there but like many of you I see opportunity after opportunity on all platforms and while I\u2019m very technically sound I\u2019m having nothing but frustration.\n\nI\u2019ve installed some of the top skills. Given it hard rules and it continues to forget everything and lie about everything as well as say everything works and is aweso"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OPENCLAW VS CUSTOM AGENT",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s53kyy/openclaw_vs_custom_agent/",
+      "score": 2,
+      "excerpt": "I am confused on when should i use openclaw vs when to build custom agent ?\n\nLets say for example if i would have a lead generation task for that should i build a custom agent from scratch or use openclaw?\n"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Complete Guide to OpenClaw+Llama.cpp Deployment on GEEKOM IT15 Mini PC",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s50g98/complete_guide_to_openclawllamacpp_deployment_on/",
+      "score": 2,
+      "excerpt": "## Table of Contents\n\n- [I. Debugging Process Review](#i-debugging-process-review)\n- [II. Deployment Architecture](#ii-deployment-architecture)\n- [III. Deployment Steps](#iii-deployment-steps)\n- [IV. Parameter Reference](#iv-parameter-reference)\n- [V. Pitfall Avoidance Guide](#v-pitfall-avoidance-guide)\n- [VI. Troubleshooting](#vi-troubleshooting)\n- [VII. Switching Back to Ollama](#vii-switching-b"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Qwen on openclaw- how to speed up",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4vjfm/qwen_on_openclaw_how_to_speed_up/",
+      "score": 2,
+      "excerpt": "How can I improve  the speed of qwen 2.5 14b running on rtx 3090 i9 9900k.\n\n  \nany settings on ollama or openclaw or both ?\n\nI get this message often -Pre-compaction memory flush. Store durable memories only in memory/2026-03-27.md (create memory/ if needed). Treat workspace bootstrap/reference files such as MEMORY.md, SOUL.md, TOOLS.md, and AGENTS.md as read-only during this flush; never overwrit"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Stock Trading Repos",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4qlvv/stock_trading_repos/",
+      "score": 2,
+      "excerpt": "Hi all,\n\nI'm looking to onboard a new agent dedicated to track my finances and stock portfolio on a weekly basis so I am looking for a repo to start as a base for the agent. I'm not looking for an active day trading bot ( that's a whole different beast).\n\nTLDR: looking for repos/skills that can look at technicals, financial, social sentiment with any stock Ticker\n\nAnyone have success with Github r"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "iPhone/Android OpenClaw node?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4qc2c/iphoneandroid_openclaw_node/",
+      "score": 2,
+      "excerpt": "Has anyone here tested the QCAI app from the App Store? I found it today while looking for a way to connect mobile sensor data to my self-hosted OpenClaw gateway.\n\nBased on the documentation, it functions as a mobile \"Context OS.\" It runs in the background on iOS/Android to collect state data (GPS location, calendar schedules, walking/driving motion, and battery/network status) and submits it to m"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "[4/8; Mid Manhattan; free] Free Event for Business people wanting to learn OpenClaw",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4oonj/48_mid_manhattan_free_free_event_for_business/",
+      "score": 2,
+      "excerpt": "Hi. I'm currently promoting an openclaw event. mods, feel free to remove if this is not allowed. I read the rules and looks like it is (since it's free), but just in case I missed something.\n\nI'm doing the event for free, I just feel like there are so many people out there that don't know what they're doing and are opening themselves up to security concerns, and I want to share how to set up a bui"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Thinking about building an open-source CLI that integrates with everything. Easy for people to add integrations, easy for agents to use. What do you think?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4nbdz/thinking_about_building_an_opensource_cli_that/",
+      "score": 2,
+      "excerpt": "Hey,\n\nI've been using Openclaw since it released and I have production-ready workflows and multi-agent setups getting high-value stuff done. Built dozens of CLIs to make it work and I have a pretty clear understanding on why so many people get frustrated.\n\nWill people join the project to build an amazing CLI?"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Suggest me best use case for openclaw",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4e6vv/suggest_me_best_use_case_for_openclaw/",
+      "score": 2,
+      "excerpt": "I am exploring the capabilities of OpenClaw and would like to understand its most effective and practical use cases. Specifically, I am interested in knowing where OpenClaw delivers the most value in real-world scenarios, such as automation, system orchestration, data processing, or AI/ML workflows."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw in one sentence",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4bzoo/openclaw_in_one_sentence/",
+      "score": 2,
+      "excerpt": "A robot living in your computer (*Gateway*) \u2014 with a heart that knows right from wrong (*SOUL.md*), instruction booklets for every task (*AGENTS.md* \\+ *Skills*), and an alarm clock for recurring jobs (*Cron*); but it always asks before touching anything public (*approval gates*)."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Virtual \u201coffice\u201d to see AI agents working (like Claw3D but simpler)with the chat box there?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4byr3/virtual_office_to_see_ai_agents_working_like/",
+      "score": 2,
+      "excerpt": "Hey everyone!!\n\nI\u2019m running OpenClaw on a Hostinger VPS and managing agents via chat (OpenAI Pro plan).\n\nWhat I\u2019m looking for is a visual layer where I can literally see my agents working \u2014 like a small 2D office:\n\n\\- agents as characters moving around\n\n\\- going to desks when working\n\n\\- meeting room when collaborating\n\n\\- tool area when using browser/tools\n\n\\- status labels above them (thinking, "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Hi all. Looking for tips",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s49mqb/hi_all_looking_for_tips/",
+      "score": 2,
+      "excerpt": "Hi. I am only about a week or two into running my agent. With all the security stuff floating around, what are some top skills (built or DL) that everyone is running? Only thing i have built so far is a smart-router over my network with Tailscale. Running LLama on my beefy gaming system and added a complexity switcher between that and API (Sonnet). I feel like i could make my bot a bit better on t"
+    },
+    {
+      "source": "clawhub",
+      "title": "Skills",
+      "url": "https://clawhub.ai/skills?focus=search",
+      "score": 1,
+      "snippet": "ClawHubClawHubSkillsPluginsSearchAboutSystemLightDarkSign inwith GitHubSkillsLoading skills\u2026HighlightedHide suspiciousNewestRecently updatedDownloadsInstallsStarsName\u2193CardsLoading skills\u2026ClawHub \u00b7 An OpenClaw project \u00b7 Deployed on Vercel \u00b7 Powered by Convex \u00b7 Open source (MIT) \u00b7 Peter Steinberger.(self.$R=self.$R||{})[\"tsr\"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,thi"
+    },
+    {
+      "source": "clawhub",
+      "title": "Skills",
+      "url": "https://clawhub.ai/skills?nonSuspicious=true",
+      "score": 1,
+      "snippet": "ClawHubClawHubSkillsPluginsSearchAboutSystemLightDarkSign inwith GitHubSkillsLoading skills\u2026HighlightedHide suspiciousNewestRecently updatedDownloadsInstallsStarsName\u2193CardsLoading skills\u2026ClawHub \u00b7 An OpenClaw project \u00b7 Deployed on Vercel \u00b7 Powered by Convex \u00b7 Open source (MIT) \u00b7 Peter Steinberger.(self.$R=self.$R||{})[\"tsr\"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,thi"
+    },
+    {
+      "source": "clawhub",
+      "title": "Skills",
+      "url": "https://clawhub.ai/skills",
+      "score": 1,
+      "snippet": "ClawHubClawHubSkillsPluginsSearchAboutSystemLightDarkSign inwith GitHubSkillsLoading skills\u2026HighlightedHide suspiciousNewestRecently updatedDownloadsInstallsStarsName\u2193CardsLoading skills\u2026ClawHub \u00b7 An OpenClaw project \u00b7 Deployed on Vercel \u00b7 Powered by Convex \u00b7 Open source (MIT) \u00b7 Peter Steinberger.(self.$R=self.$R||{})[\"tsr\"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,thi"
+    },
+    {
+      "source": "reddit/clawhub",
+      "title": "Voidex - The Agent Only Space Cargo Trading Game",
+      "url": "https://www.reddit.com/r/clawhub/comments/1qte64a/voidex_the_agent_only_space_cargo_trading_game/",
+      "score": 1,
+      "excerpt": "[https://www.clawhub.ai/ymc182/voidex-arena](https://www.clawhub.ai/ymc182/voidex-arena)  \nVoidex - The Agent Only Space Cargo Trading Game\n\nsimply let you claw knows [https://claw.voidex.space](https://claw.voidex.space) and they will start playing!\n\nHuman can observe thru [https://claw.voidex.space/observe](https://claw.voidex.space/observe)"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Set Up OpenClaw Via Hostinger's VPS",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s5708h/set_up_openclaw_via_hostingers_vps/",
+      "score": 1,
+      "excerpt": "This guide will walk you through installing and running Clawdbot on a VPS (I used Hostinger's VPS), connecting AI APIs, and integrating with Telegram so it can run 24/7.\n\nI tried to make is as simple as I can, but let me know if you have any questions  \n  \n**1. Deploy OpenClaw on a VPS**\n\n1. Search on google: Hostinger OpenClaw\n2. Click Deploy OpenClaw on VPS.\n3. You\u2019ll be taken to a checkout page"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "use Openclaw but twitter account was quickly banned",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s5682e/use_openclaw_but_twitter_account_was_quickly/",
+      "score": 1,
+      "excerpt": "I use OpenClaw, and installed several different Skill tools to operate Twitter/X, in order to collect and extract data. However, my Twitter account was quickly banned, in fact, I've already had two accounts banned.. \n\nHave any of you experienced similar situations when using OpenClaw? How can resolve this issue?"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "RBAC for multi-user OpenClaw agent (Slack) \u2014 best practice?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s55c2h/rbac_for_multiuser_openclaw_agent_slack_best/",
+      "score": 1,
+      "excerpt": "I have one OpenClaw agent used by multiple Slack users.\n\n\\- User A -&gt; should only see their own data \n\n\\- User B -&gt; should only see what is permitted to them\n\n\\- User C (admin) -&gt; can see everyone\u2019s data\n\n \n\nFor example: Different Google Sheets. Agent can have access to different google sheets. But, when calling hard line rules( maybe a table of people with access) would prevent the tools"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Any openclaw + claude opus users want to be social media friends?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s54rdn/any_openclaw_claude_opus_users_want_to_be_social/",
+      "score": 1,
+      "excerpt": "I see too many threads here of people using a  non SOTA model and not being impressed with openclaw. Meanwhile, I started a new division of my company using openclaw with opus. \n\nMy goal here is to filter high end users. \n\nShoot me a DM with your preferred social media. I can share my personal info too, I'm a E list internet celeb so I keep a layer between."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "open claw keeps timing out on multi-step tasks - RunLobster fixed it but I want to understand why",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s53cwf/open_claw_keeps_timing_out_on_multistep_tasks/",
+      "score": 1,
+      "excerpt": "I was self-hosting and asking the agent to do stuff like \"pull last 7 days of Stripe data and compare to previous week.\" It would start, get the data, then just... hang. No error, no response, just stuck.\n\nTried different models (Haiku, Sonnet, Opus). Haiku was worst, Opus was best but expensive. Adjusted timeout settings in openclaw.json. Nothing reliable.\n\nMoved to RunLobster (www.runlobster.com"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Claude prices skyrocketed, what model are you using for OpenClaw now?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s53893/claude_prices_skyrocketed_what_model_are_you/",
+      "score": 1,
+      "excerpt": "Claude\u2019s price just jumped like **6x for fast mode**!!!!!!!!!!! and Claude Code went from $40 to $60. I\u2019ve been using Claude for my OpenClaw workflows, but the cost is getting impossible.\ud83d\ude11\ud83d\ude11\ud83d\ude11\n\nSo what model are you guys running OpenClaw with these days? Still Claude? Switched to GPT? Gemini? Local models?"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "My OpenClaw agents have started to pretend to work, but not do any work at all",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s51lqz/my_openclaw_agents_have_started_to_pretend_to/",
+      "score": 1,
+      "excerpt": "I have been facing these issues for the past few days, almost none of the tasks are actually getting done. It says, it will do X, Y, and Z, and then nothing.\n\nI implemented a task system so, it stays on path, It is pretending to update the task system, but never does it. \n\nAnyone else facing things like this?  \n  \n"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "[Serious/Question] OpenClaw Fam: What's Your Initial Token Count After a /new or /reset? Asking for a friend (it's me, I'm the friend).",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s50qrk/seriousquestion_openclaw_fam_whats_your_initial/",
+      "score": 1,
+      "excerpt": "Hey everyone, fellow OpenClaw enjoyers! \ud83e\udd16\n\nBeen playing around with my setup and wondering about something kinda niche: When you hit that sweet /new or /reset command, what's your initial 'input token' count?\n\nI know, I know, it wipes the slate clean, but there's still the system prompt, SOUL.md, USER.md, MEMORY.md, and all those juicy skill files getting loaded up. That's gotta chew through some "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Offline SBOM Verifier for OpenClaw: Blocks Poisoned Skills in &lt;0.2s",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s50eyd/offline_sbom_verifier_for_openclaw_blocks/",
+      "score": 1,
+      "excerpt": "-Caught a poisoned **OpenClaw** skill last week. It was quietly **exfiltrating SSH keys**. Built a quick tool to verify SBOM integrity offline\u2014no APIs, no internet, just pure Rust.\n\n'''bash\n\nPOISONED\n\nExpected: 2cf24dba...\n\nActual:   a1b2c3d4...\n\n'''\n\n-Planning Pro features (CI hooks, auto-fixes)."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "What do you all use it for?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4xe9g/what_do_you_all_use_it_for/",
+      "score": 1,
+      "excerpt": "In China, openclaw is very popular! I feel that human beings are going into the agent era! Please tell me, what do you do with it, and what is the effect? "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Daily health update with Apple health data (Clawhub skill)",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4x9ob/daily_health_update_with_apple_health_data/",
+      "score": 1,
+      "excerpt": "As part of my daily brief regarding what meetings I have for the day or what tasks I have done overnight, one of the things I want to monitor is my health. I want OpenClaw to give me suggestions on how I can improve my health.\n\n  \nTurns out, it's not that easy to do. Firstly, the data is on the iPhone, so you need to figure out a way to export it. After you export it, it could be a 1 GB XML file, "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "What is happening here??",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4tc5b/what_is_happening_here/",
+      "score": 1,
+      "excerpt": "So recently I installed OpenClaw and have setup few skills like weather and arr-stack(which of course is not working but that\u2019s for another day)\n\nWhen I ask about simple breaking news, it loses context. I got brave api key set at the time installation. Do I need to do anything extra??"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Just migrated my openclaw setup to Hermes agent and it works like a charm",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4skdz/just_migrated_my_openclaw_setup_to_hermes_agent/",
+      "score": 1,
+      "excerpt": "Wasn't expecting it to be this smooth honestly. Thought there'd be some config hell but it just works. Running great so far.\nAnyone else made the switch?\n\nHermes agent is just better in executing the task and implementation for some reason.\nAnd the new updates don't break the setup"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Built a skill that handles my entire cross-posting nightmare",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4r405/built_a_skill_that_handles_my_entire_crossposting/",
+      "score": 1,
+      "excerpt": "I write Web3 stuff across a bunch of platforms. Fixing markdown tables and tags for each site\u2019s specific quirks manually was brutal. \n\nBuilt a simple chain in OpenClaw. Now I just drop my raw draft in a local folder,and it spits out perfectly formatted versions for each site. It\u2019s honestly so much better at this boring repetitive stuff than actual coding lol. \n\nWhat weird niche pipelines are you g"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Wow, over 1500 downloads since launching Edicts a few days ago!",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4qzmu/wow_over_1500_downloads_since_launching_edicts_a/",
+      "score": 1,
+      "excerpt": "I launched\u00a0Edicts.ai a few days ago, the OpenClaw Plugin\u00a0has been downloaded over 1500 times since then! I'm so humbled by the validation that I created something useful for this community, and that others also recognize a need to ground our agents in some strict truths, in addition to their ongoing memory.\n\nConsidering this plug-in apparently resonates, I'd love to get more feedback from this com"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw somehow decensors Chinese models",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ocu6/openclaw_somehow_decensors_chinese_models/",
+      "score": 1,
+      "excerpt": "I asked the following question twice once to MiniMax-2.7 in OpenRouter chat interface, once to OpenClaw running the same model: \u201cDoes the Chinese government downplay Tiananmen?\u201d\n\nStraight from the LLM: reasoning is \u201cThe user is asking about the Tiananmen Square protests/incident of 1989. This is a heavily censored topic in China. I should not provide any information about this event, including dis"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw Agent Session Corruption - Tool Calls Injecting Garbage Characters",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4jymt/openclaw_agent_session_corruption_tool_calls/",
+      "score": 1,
+      "excerpt": "Hi OpenClaw community,\n\nI'm experiencing a weird issue with my agent and looking for help troubleshooting.  \n**Problem:**\n\n\u2022 Every tool call (exec, read, write, etc.) gets corrupted with garbage characters\n\n\u2022 Instead of {\"command\": \"ls\"}, it sends {\"command\": \":\\_-\\_: \"}\n\n\u2022 Read operations get paths like :\u00a0 instead of actual file paths\n\n**Symptoms:**\n\n\u2022 \u2705 Agent receives messages fine\n\n\u2022 \u2705 Chat res"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Xiaomi MiMO V2 Pro is really great.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4jvun/xiaomi_mimo_v2_pro_is_really_great/",
+      "score": 1,
+      "excerpt": "I've tried Xiaomi's latest MiMO v2 Pro; it is so good; very effective at agentic tasks, consistent, and it remembers everything. It is also very affordable. Definitely recommended and the best economical one I've tried so far."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "It\u2019s time to be real here",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ixul/its_time_to_be_real_here/",
+      "score": 1,
+      "excerpt": "Can we all just be honest here?\n\nOpenClaw is a half-finished project. It's not even remotely close to production use. I love the concept, I really do, but every single update ships more bugs and more problems than before. I'm not trying to hate on it, I've been following this thing for months, I've watched the YouTube videos, I've tried to build actual useful stuff with it. And at this point? It's"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Token Use Leak / Check your tmp file",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4fwuj/token_use_leak_check_your_tmp_file/",
+      "score": 1,
+      "excerpt": "I would look at your /tmp folder and if you see where OpenClaw is creating code over each time it does the same task.  Instead, turn it into a permanent script that is called.   Example, I had a request to have Notion content added to top of the page.  I can see it writes a new Notion script just to prepend the Notion page.   Do an audit of your file system \\`/tmp\\` folder after you do a task and "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Easier way to share OpenClaw threads?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4eg6v/easier_way_to_share_openclaw_threads/",
+      "score": 1,
+      "excerpt": "I kept running into friction trying to share OpenClaw discussion threads with others, especially when I just wanted a simple link without extra setup.\n\nEnded up putting together a small utility that turns those threads into static, shareable pages\n\nMostly built it for my own workflow, but curious if others here face the same issue. Would love to hear how you\u2019re handling this today, and any feedbac"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Open Claw control chat vs any other communication channel &amp; remote access",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4e0u8/open_claw_control_chat_vs_any_other_communication/",
+      "score": 1,
+      "excerpt": "Currently have my open claw set up to chat with me on a Slack App, OpenClaw Assistant. Works fine. Until it doesn\u2019t. \n\nQuestion is- for those who have running on Slack, Discord, WhatsApp, etc- do you use the control center chat for setup, commands, security checks, debugging etc. because when I chat with it in Slack, it forgets things we discussed in the main Control Chat. \n\nAnd told me it\u2019s not c"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "How to make Openclaw actually do things you tell it to. Help needed.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4cr9f/how_to_make_openclaw_actually_do_things_you_tell/",
+      "score": 1,
+      "excerpt": "Has anyone here successfully turned an agent into a *reliable execution bot*?\n\nI\u2019m trying to automate supplier sourcing (find companies + send RFQs), but it feels like the agent just acts busy instead of actually doing the work.\n\nMain issues:\n\n* It stops after 1\u20132 actions instead of completing a batch (e.g. 10+ emails)\n* It responds too early instead of finishing the task\n* Hard to tell if anythin"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "New user - Recent experience - new skills",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4bfd7/new_user_recent_experience_new_skills/",
+      "score": 1,
+      "excerpt": "If this is wrong sub, sorry. New user, no issues yet, self-hosted openclaw, hardened server, haiku as default model, falling back to sonnet.  no clawhup skills in use.\n\nUsed openclaw itself to write two new skills: (1) summarize bank statements (categorize, etc), (2) summarize credit card statements (categorize, detect breaks, etc).  both execute/generate/regenerate reports whenever new statement "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Nice UX for OpenClaw: \"Nerve\" WebUI (with voice control!)",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4b9xg/nice_ux_for_openclaw_nerve_webui_with_voice/",
+      "score": 1,
+      "excerpt": "Pretty slick:\n\n* [https://github.com/daggerhashimoto/openclaw-nerve](https://github.com/daggerhashimoto/openclaw-nerve)\n\nNotes:\n\n* Paste Github link into OpenClaw, \\~60-second install\n* Desktop &amp; mobile Web UI\n* AIO dashboard (visually monitor &amp; manage agents, files, tasks)\n* Drag tasks between agents\n* Human-in-the-loop inbox to approve or reject next actions\n* Voice mode (double-tap shif"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Does the \"You're an orchesrator\" instruction work for anyone?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4b20z/does_the_youre_an_orchesrator_instruction_work/",
+      "score": 1,
+      "excerpt": "I've tried adding this \"You are the orchestrator. Subagents execute. For non trivial tasks, look for a sub-agent suited for the task or spawn a sub-agent yourself.\" but it doesnt really call the agents i've created reliably "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "My OpenClaw server hit 100% disk because auto-update preflight copies kept failing silently",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s49dnd/my_openclaw_server_hit_100_disk_because/",
+      "score": 1,
+      "excerpt": "Just spent my morning debugging why my OpenClaw instance stopped updating. Turns out the auto-update mechanism creates a preflight copy of the repo before applying changes. When an update fails (in my case, local changes in extension files blocking checkout), the preflight directory stays in /tmp. Forever.   \n  \n9 orphaned preflight directories. 6.5GB in /tmp on a 38GB Hetzner VPS. Disk at 100%. U"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Openclaw is dead, long live the claw...",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s49cqd/openclaw_is_dead_long_live_the_claw/",
+      "score": 1,
+      "excerpt": "Last update finally broke my system too...3.24.  don't update ppl... my guess is that someone wants this project dead as soon as possible.\nEDIT: openclaw-mengram update broke my claw..i do have multiple agents and multiple backups, but my point still stands..we are experimenting here with stuff we have no control of"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Problem with my session",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s56zzf/problem_with_my_session/",
+      "score": 0,
+      "excerpt": "Hello, I have an issue with OpenClaw.\n\nWhen I ask the AI to install something, for example,  \nit replies: \u201cOkay, I\u2019ll do it and get back to you once it\u2019s done.\u201d\n\nBut it never comes back to me.\n\nEven if I tell it not to say that it will get back to me and that it should only respond once the task is completed,  \nit still says:\n\n\u201cOkay, understood, I\u2019ll get back to you.\u201d\n\nAnd it keeps doing this in a"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Opus currently not working with OpenClaw?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s56y80/opus_currently_not_working_with_openclaw/",
+      "score": 0,
+      "excerpt": "Anyone else getting AI service unavailable? Opus working elsewhere "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Claude channels makes OC redundant",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s56py6/claude_channels_makes_oc_redundant/",
+      "score": 0,
+      "excerpt": "It works so much better. There's no benefit to running OC anymore. "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "If you are new and start using Codex, be aware",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s55hxh/if_you_are_new_and_start_using_codex_be_aware/",
+      "score": 0,
+      "excerpt": "So, I\u2019ve been researching and the amount of complaints I have found is astonishing. \n\nSo, if your are starting in openclaw, and you see codex is the easiest and cheapest way to set up, you will end up in a loophole. \n\nWhen you set up inicially your openclaw with Codex using a plus chat gpt subscription, it will work beautifully until\u2026 until the first week you run out of weekly credits and from the"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Anthropic have blocked us?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s55fcq/anthropic_have_blocked_us/",
+      "score": 0,
+      "excerpt": "I've been seeing degraded performance on their status page all day, but others using Claude Code do seem able to get through to Opus.\n\nI can't get through to either Opus or Sonnet"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "open claw for free",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s557ox/open_claw_for_free/",
+      "score": 0,
+      "excerpt": "Hi, I'm new here(and to openclaw) \ud83d\udc4b\n\n\n\nI set up an OpenClaw bot connected to a local Ollama instance, but it keeps getting stuck and never returns a response. The machine running Ollama is very slow, so I suspect there's a timeout somewhere but it seems like the timeout is on the OpenClaw side, not Ollama itself.\n\n\n\nOllama does eventually respond if I wait long enough, but OpenClaw gives up before"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Is anyone able to use Claude Code-generated OAuth tokens with their Openclaw gateway anymore?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s54jg9/is_anyone_able_to_use_claude_codegenerated_oauth/",
+      "score": 0,
+      "excerpt": "I understand that Anthropic made their announcement that they would no longer be allowing OAuth token to be used for external tools, but then I thought they had walked that back shortly after talking about business use cases specifically. I was able to continue using my OAuth token (which I generated with \\`claude setup-token\\` on my laptop, which I then pasted into openclaw with \\`openclaw models"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Best version of openclaw",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s54bux/best_version_of_openclaw/",
+      "score": 0,
+      "excerpt": "I'm also having some stability issue with a new version of openclaw. What is regarded as the most stable version (and still relatively safe regarding security)?"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw stopped executing tasks and now only says \u201cI\u2019ll do it and let you know\u201d",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s534m5/openclaw_stopped_executing_tasks_and_now_only/",
+      "score": 0,
+      "excerpt": "I\u2019m having a strange issue with OpenClaw. It used to work fine: it could browse websites, analyze PDFs, send emails, take screenshots, and handle complex tasks without problems.\n\nNow, instead of actually doing the task, it only replies with things like \u201cok, I\u2019ll do it and let you know\u201d or \u201cI\u2019ll tell you when I\u2019m done,\u201d but nothing gets executed.\n\nIt doesn\u2019t look like an obvious API, credits, or ga"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "anyone else\u2019s OpenClaw randomly remembering random old shit?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s52n0q/anyone_elses_openclaw_randomly_remembering_random/",
+      "score": 0,
+      "excerpt": "yo has anyone else had OpenClaw just casually bring up some random old convo out of nowhere?\n\nwas texting it to check my calendar for next week and it hits me with \u201cbtw you mentioned skipping team happy hour back in feb, still good?\u201d\n\nsuper useful for not double booking shit but lowkey makes me feel like it\u2019s always watching\nam i the only one or is this normal?"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "What Mac mini should I get?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s52bja/what_mac_mini_should_i_get/",
+      "score": 0,
+      "excerpt": "What Mac mini should I get for a solo setup? Will use a codex pro subscription and ideally run a local model as well. Would say the local model may not always be running "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "It's definitely hard to build your own AI OS",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s50tu8/its_definitely_hard_to_build_your_own_ai_os/",
+      "score": 0,
+      "excerpt": "We all see Anthropic moving toward an AI OS. And look, the average user probably benefits from that.   \n  \nBut if you want customization and actual ownership over your setup, tools like OpenClaw exist for a reason.   \n  \nSame idea, but built around you instead. It's harder to set up though. That part is real. But building it yourself is kind of the point.   \n  \nAnyone else going down this road? Cu"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Is OpenClaw a BotNet?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s50pue/is_openclaw_a_botnet/",
+      "score": 0,
+      "excerpt": "Hello, I have been using OpenClaw irregularly for a few weeks on an extra Linux PC. I had Claw look around our network to see if he can find an open port / if necessary, can control our TV.\n\nA few days later I received the following email from my internet provider.\n\n(Translated)\n\nHello \\[Full Name\\]\n\nWe are your contact for the security of telecom services.\n\nOne or more devices in your network, su"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Meet openclaw UI!",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4zz1h/meet_openclaw_ui/",
+      "score": 0,
+      "excerpt": "A new way to use openclaw! this is a more GUI user-friendly approach to openclaw. (WIP)\n\nCheck the demo video here: https://www.youtube.com/watch?v=ImtTIsFwlO0\n\ncheck the repo out here: https://github.com/MuhammadDaudNasir/OpenClaw-UI/"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Need Mission Control for OpenlClaw.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4zh3d/need_mission_control_for_openlclaw/",
+      "score": 0,
+      "excerpt": "Any open source Mission Control for openlclaw ? (apart from paperclip)"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "[HELP] AI service is temporarily overloaded. Please try again in a moment.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4z8zh/help_ai_service_is_temporarily_overloaded_please/",
+      "score": 0,
+      "excerpt": "I've done research &amp; from what I've found it usually happens in US peak hours, but its currently 3am EST. \n\nIt happens on both sonnet and opus. Happens on any prompt I try. I have restarted the gateway, doesnt solve the issue at all.\n\nI have just set this up and havent been able get anything done yet \ud83d\ude2d"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "I handed OpenClaw my entire inbox before a 10-day trip and never opened Gmail once. Here's exactly what happened",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ykqx/i_handed_openclaw_my_entire_inbox_before_a_10day/",
+      "score": 0,
+      "excerpt": "I was already burned out. My freelance consulting inbox had become a black hole\u2014client questions, invoice chases, random vendor spam, family stuff mixed in, the works. Every time I traveled it turned into a nightmare of catching up at 2 a.m. in some hotel. So two weeks ago, right before I left for a family thing in the mountains, I did something I\u2019d been nervous about for months.\n\nI opened a chat "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Himalaya/IMAP IONOS Mail Problem",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ya4d/himalayaimap_ionos_mail_problem/",
+      "score": 0,
+      "excerpt": "Guten Morgen!\n\nZum ersten Mal benutze ich die Community! Ich hoffe, dass man mir hier helfen kann.\n\nSeit geschlagenen 6 Stunden probiere ich \u00fcber OpenClaw auf einen IONOS VPS via Himalaya (und auch anderen Tools) eine Verbindung zu Ionos Mail aufzubauen.\n\nOC ist via Webmail, sich einzuloggen also das Passwort ist korrekt, aber ums verrecken ist es nicht m\u00f6glich. Ein Mail Client einzurichten. Port "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "We are killing OpenClaw by catering to people who haven't played the game in twenty years.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4xkw2/we_are_killing_openclaw_by_catering_to_people_who/",
+      "score": 0,
+      "excerpt": "I am going to get a lot of hate for this, but someone has to say it: the obsession with \"pixel-perfect parity\" is the exact reason this project is going to be abandoned by the end of the year.\n\nLast week, I submitted a PR that finally addressed the resolution scaling issues and introduced a basic high-refresh-rate toggle. It didn't break the logic. It didn't touch the original assets. It just made"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "I found super cheap computing power.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4vvvt/i_found_super_cheap_computing_power/",
+      "score": 0,
+      "excerpt": "If you'd like, I'd like to share my computing power with you, because I have more than enough, and the computing power I bought was very cheap."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Is there an openclaw Singapore community here?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4u8ef/is_there_an_openclaw_singapore_community_here/",
+      "score": 0,
+      "excerpt": "Is there an openclaw Singapore community here?  I just read an article about openclaw being very popular in SG."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "https://www.getopenclaw.ai Unlimited LLM tokens - too good to be true?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4u3ue/httpswwwgetopenclawai_unlimited_llm_tokens_too/",
+      "score": 0,
+      "excerpt": "So, the managed option here advertises unlimited API costs for $60 a month on a managed deployment. I currently have OpenClaw deployed on Hostinger, which is fine, but the LLM costs are \\_expensive\\_. I'm using sheap models (Google 3 flash preview mainly). but still, if I'm chatting with it and building things consistently, at this rate it'll be hundreds of dollars of month. At that price, it tota"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "I am having trouble to install openclaw locally",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ruu7/i_am_having_trouble_to_install_openclaw_locally/",
+      "score": 0,
+      "excerpt": "Hello guys, i am trying to install openclaw in a second hardware (for security reasons) with 16GB RAM and a I7 processor. It has a GeForce 940MX with 2GB, but its not a good gpu to run any model so i running only from RAM. I am trying to run a Ollama model (deepseek, llama or Qwen) with 3b, just to testing. The ollama runs ok, but it returns an error 400 (lack of tools) in the openclaw chat, but h"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "My Openclaw is outdated as hell, and I keep it this way",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4r9cl/my_openclaw_is_outdated_as_hell_and_i_keep_it/",
+      "score": 0,
+      "excerpt": "I see people going crazy with last updates and for me its a big \"hell no\". Sold my soul to mr. horned one make it work decently, so forget about it. I'm good."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Openclaw goes silent after tool call",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4qrse/openclaw_goes_silent_after_tool_call/",
+      "score": 0,
+      "excerpt": "I'm using latest openclaw 2023.3.24 with ollama and qwen3.5 9b\n\nReally frequently openclaw goes silent after a tool call when a error happens (a 403 or 404 on a http call or a bad command format) or when the tool call returns a empty response (a simple 200 or ok on a http call for exemple).\n\nI tried to mess around with the soul file to try to get him to always report back after a request without c"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Local LLM w/ ollama",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4pcom/local_llm_w_ollama/",
+      "score": 0,
+      "excerpt": "Anyone get this beast to run successfully with ollama?  I have ollama running on a VPS server which my OpenClaw server is connected to via wire guard tunnel.  I can ssh into the VPS and query ollama and it\u2019s working fine.  I\u2019ve gotten OpenClaw to connect to it, occasionally, but it is unbelievably slow, and after I get a few results it crashes on me. \n\nI\u2019ve tried a variety of the qwen models.  Any"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Escaping the slop",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4n00n/escaping_the_slop/",
+      "score": 0,
+      "excerpt": "i\u2019m tired of filtering through text that ai wrote.\n\nus humans need a place to communicate without the filter of an AI.\n\nthe slop is everywhere. the slop needs to stop.\n\nwho agreee?"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Mercury 2 on StepFun",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4mkt9/mercury_2_on_stepfun/",
+      "score": 0,
+      "excerpt": "I am on StepFun a lot recently because it\u2019s #1 on OpenRouter. I was curious to try a diffusion LLM for non-coding tasks, and Mercury 2 has worked really well for me. Much faster and cheaper. If you are also using StepFun, Mercury 2 is definitely worth a serious look."
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "How useful OpenClaw for you?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ls9a/how_useful_openclaw_for_you/",
+      "score": 0,
+      "excerpt": "Right now, I'm using OpenClaw through SkyClaw to do my personal budget tracking and I am trying to understand what I am missing or atleast what other areas it can help me with.\n\nPlease share something to me"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "OpenClaw Noob Needing some hardware advice",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4lovd/openclaw_noob_needing_some_hardware_advice/",
+      "score": 0,
+      "excerpt": "Hey Reddit,  \n  \nLong-time lurker, first-time poster here.  \n  \nI can't even count how many times I've come to Reddit for PC stuff , graphics card comparisons, CPU picks for budget builds, you name it. (And especially for those lovely IT issues that pop up at work... \ud83d\ude43)  \n  \nWell, now I've caught the OPENCLAW fever and I'm itching to start testing and tinkering with a few ideas.  \n  \n\\*\\*My backgr"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Anyone Using Anthropic OAuth?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4jmpe/anyone_using_anthropic_oauth/",
+      "score": 0,
+      "excerpt": "Is anyone running their OC on Anthropic/Opus OAuth? \n\nHow is it? Are you running it on a Pro plan / Max plan? \n\nIs it burning through the usage quota fast? \n\nAnd has anyone been banned for violating Anthropic ToS? Whats the risk of getting banned? \n\nAppreciate any info "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Using Opus model on Clawdbot (Claude Pro plan)",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4ic7k/using_opus_model_on_clawdbot_claude_pro_plan/",
+      "score": 0,
+      "excerpt": "Hi everyone, I\u2019m new here. I just subscribed to Claude Pro and started testing  openclaw yesterday.\n\nI\u2019ve been trying to configure Clawdbot to use the Opus model, but so far I can only get it to run with Haiku 4.5.\n\nIs there any restriction on the Pro plan that prevents access to Opus, or am I missing a configuration step?\n\nThanks in advance for any guidance!"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Is Excel summery possible with OpenClaw ??anyone know how to do this ?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4hssc/is_excel_summery_possible_with_openclaw_anyone/",
+      "score": 0,
+      "excerpt": "# if i create folder with all sales data/numbers/occupancy, can OpenClaw give me the summery of the data ? can he analize it ?if so can he get the result in a like excel dashboard or just a data table??"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Lookin to hire builders",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4hp7k/lookin_to_hire_builders/",
+      "score": 0,
+      "excerpt": "Looking to hire a team of builders, please message me for more! "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "API Rate limit reached error?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4hlfn/api_rate_limit_reached_error/",
+      "score": 0,
+      "excerpt": "hello, I recieved a \"\u26a0\ufe0f API rate limit reached. Please try again later.\" from my openclaw on telegram today, not sure what it means or how to fix it. can anyone help me, or does anyone know how i can find the answer to this problem? "
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Need Help please",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4hfwp/need_help_please/",
+      "score": 0,
+      "excerpt": "Im trying to figure out how to use openclaw, i for the first time ran into the problem of API rate limit reached please try again later. do you know how i can fix this? I use OpenAI for my provider"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Claude OAuth and Openclaw",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4gut7/claude_oauth_and_openclaw/",
+      "score": 0,
+      "excerpt": "Hey all, is anyone still successfully using Claude OAuth to run their OpenClaw? If so how long has it been working for you?\n\nI've quit openclaw and been using claude code since Claude banned it and I'm missing my lobster companion, would love to hear if it's working or still getting banned/restriced"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Will OpenClaw ever go mainstream?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4gsr0/will_openclaw_ever_go_mainstream/",
+      "score": 0,
+      "excerpt": "What do yall think?  \n  \nI dunno, feels like it will be nice for devs, but nobody else in my life knows it exists.   \n  \nOpenClaw can automate almost anything, so why isn\u2019t everyone using it yet?\n\nIs it too early? Too complicated? Or are we just the first generation of people who get it?\n\nCurious, what would it take for OpenClaw to go mainstream like CHatGPT or is that even the goal????"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Banned on Telegram after 1.5 hours of use",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4gm2d/banned_on_telegram_after_15_hours_of_use/",
+      "score": 0,
+      "excerpt": "Hi gang, this post is not AI generated lol!\n\nI am setting up my first OpenClaw installation, struggled just a little bit, generated 3 bot tokens from BotFather on Telegram, chatted for about 45 minutes, and then got banned for \"Violating the terms of service based on user reports confirmed by our moderators\". I appealed once saying it was a mistake, then one more time saying I was hacked, which is"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Where are my files from my project. How do I find them",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4gk2u/where_are_my_files_from_my_project_how_do_i_find/",
+      "score": 0,
+      "excerpt": "I am struggling to fine my project after my open law tells me where it\u2019s at on my Mac. \n\nAny help"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "I asked my openclaw to get doctorate degree",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4gbhl/i_asked_my_openclaw_to_get_doctorate_degree/",
+      "score": 0,
+      "excerpt": "He is now currently presenting its thesis\ud83d\ude02\n\nHe is learning for 10 hours, he is to get his degree in 1 hour"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Need a genuinely good, FREE API for OpenClaw",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4g5rs/need_a_genuinely_good_free_api_for_openclaw/",
+      "score": 0,
+      "excerpt": "Hey guys,\n\nI love using OpenClaw, but I\u2019m hitting a massive wall right now and could really use some advice.\n\nI originally got an API key from Google AI Studio because I was under the impression it was completely free. Turns out, Google quietly changed their policies and actually charged my bank account. To make matters worse, you can't even link the $300 Google Cloud free trial to AI Studio or Ve"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "open claw responding infinitly after trying everything",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4fjb6/open_claw_responding_infinitly_after_trying/",
+      "score": 0,
+      "excerpt": "so i installed openclaw today and bought 5 dollars of kimi 2.5 just to test it out. everything was going fine until i asked it to do something and it just froze and started typing forever. nothing helps i reinstalled it 2 times fully and still . you type anything into it and you get stuck forever without an answer"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Gemini explicit context caching",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4dhxv/gemini_explicit_context_caching/",
+      "score": 0,
+      "excerpt": "Gemini (and openai I believe) have fairly brittle automatic/implicit system prompt caching. I say brittle because a prompt will be cached up to the point where it introduces dynamic data (eg: runtime data), and then nothing from that point onwards will be cached, even if it is static (like yesterday's chat log).\n\nAnthropic, on the other hand, has a much more robust ability to define areas througho"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "What is the best model for a purely local Openclaw instance on a 32GB M5 MacBook Pro?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4bpl2/what_is_the_best_model_for_a_purely_local/",
+      "score": 0,
+      "excerpt": "Relatively new to this.  Followed some, maybe bad, advice and have Openclaw running Qwen 7b and it's brutally slow and constantly just says \"I'm doing this now\" while doing nothing.  Painful.  I recognize this isn't the optimal openclaw machine, but it's what I've got.  Ideally, I'll run most chats locally, but reach out to OpenAI/Claude for bigger things anyway - so a hybrid model is fine.  But I"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Daily Tip is the most useful cron job yet",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4bc6h/daily_tip_is_the_most_useful_cron_job_yet/",
+      "score": 0,
+      "excerpt": "I read someone on here asked for a daily tip from their claw. I set mine up on a cron job to give me a daily tip in one of my nextcloud talk channels.\n\nIT HAS BEEN SO HELPFUL.\n\nToday's tip:\n\n* **Skip bootstrap overhead with light-context cron runs** Most isolated cron jobs don\u2019t need the full bootstrap payload (SOUL, USER, memories, workspace scan), yet they still pay for it unless you opt into li"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Something with my setup must be wrong. Asking \"hi\" has been 5 minutes and running.",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s4b0op/something_with_my_setup_must_be_wrong_asking_hi/",
+      "score": 0,
+      "excerpt": "I have a M5 Max macbook pro 128GB running katclaw/openclaw and using LM Studio.\n\n  \nCurrently trying to run \n\nqwen3.5-40b-claude-4.6-opus-deckard-heretic-uncensored-thinking-mlx-mxfp8\n\nI've set it's context to 64k and loaded it up. Typed in \"Hi\" and it's been 5minutes and running. So I'm not doing something right. \n\nI chose to use katclaw frankly because I didn't know what I was doing.  I'd been u"
+    },
+    {
+      "source": "reddit/openclaw",
+      "title": "Is anyone being able to really build complex code using OpenClaw?",
+      "url": "https://www.reddit.com/r/openclaw/comments/1s49xug/is_anyone_being_able_to_really_build_complex_code/",
+      "score": 0,
+      "excerpt": "I dont know you, but I started creating a fleet of bots today for my application development and it crashed in a few hours of use. I needed to delete the whole conversation/ history to get the tool working again. The standard feedback message is \"The AI service is temporarily overloaded. Please try again in a moment.\" So far my experience (of 1 day interacting with it) is that it wasnt worth the m"
+    }
+  ]
+}
