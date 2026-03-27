@@ -2,9 +2,11 @@
 """
 Simple ingestion webhook service for the expense app.
 
-- POST /webhook/ingest: accepts parsed expense JSON from agent, verifies HMAC signature (if WEBHOOK_SECRET set), saves to SQLite DB.
+- POST /webhook/ingest: accepts parsed expense JSON from agent, verifies HMAC signature (if WEBHOOK_SECRET set), saves to DB.
 - GET /api/expenses: list expenses
 - GET /api/export: returns CSV
+
+Database: uses Postgres when DATABASE_URL env var is set (Vercel), otherwise falls back to SQLite (local dev).
 """
 import os
 import hmac
@@ -17,14 +19,25 @@ import io
 from typing import Optional
 
 from fastapi import FastAPI, Request, Header, HTTPException, Response
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 # Config
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DB_PATH = os.getenv("INGEST_DB_PATH", os.path.join(BASE_DIR, "data", "expenses.db"))
-WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")  # set to enable HMAC verification
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
+DATABASE_URL = os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL")
+PH = "%s" if DATABASE_URL else "?"  # SQL placeholder differs between Postgres and SQLite
 
 app = FastAPI(title="Expense Ingestion Service")
+
+CORS_ORIGINS = [o.strip() for o in os.getenv("CORS_ORIGINS", "*").split(",")]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=CORS_ORIGINS,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # Optional in-memory rate limiting for the ingestion webhook.
@@ -55,13 +68,33 @@ def ensure_db_dir(path: str):
     os.makedirs(dirpath, exist_ok=True)
 
 
-def get_conn():
-    ensure_db_dir(DB_PATH)
-    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-    conn.row_factory = sqlite3.Row
-    return conn
+class _DbConn:
+    """Thin wrapper that normalizes sqlite3 and psycopg2 connection interfaces."""
 
-_conn = get_conn()
+    def __init__(self):
+        if DATABASE_URL:
+            import psycopg2  # type: ignore
+            self._raw = psycopg2.connect(DATABASE_URL)
+            self._is_pg = True
+        else:
+            ensure_db_dir(DB_PATH)
+            self._raw = sqlite3.connect(DB_PATH, check_same_thread=False)
+            self._raw.row_factory = sqlite3.Row
+            self._is_pg = False
+
+    def execute(self, sql: str, params=()):
+        if self._is_pg:
+            import psycopg2.extras  # type: ignore
+            cur = self._raw.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+            cur.execute(sql, params if params else None)
+            return cur
+        return self._raw.execute(sql, params)
+
+    def commit(self):
+        self._raw.commit()
+
+
+_conn = _DbConn()
 
 
 def init_db():
@@ -123,14 +156,23 @@ def verify_signature(body: bytes, signature_header: Optional[str], timestamp_hea
         ok = hmac.compare_digest(expected_body_only, signature_header) or (expected_with_ts and hmac.compare_digest(expected_with_ts, signature_header))
         if not ok:
             return False
-        # Persistent replay protection using SQLite table
-        cur = _conn.execute("SELECT ts FROM replays WHERE signature = ?", (signature_header,))
+        # Persistent replay protection
+        cur = _conn.execute(f"SELECT ts FROM replays WHERE signature = {PH}", (signature_header,))
         if cur.fetchone():
             return False
-        # Insert signature (ignore if race) and prune old entries
-        _conn.execute("INSERT OR IGNORE INTO replays (signature, ts) VALUES (?, ?)", (signature_header, ts or now))
+        # Insert signature with ON CONFLICT DO NOTHING (Postgres) or INSERT OR IGNORE (SQLite)
+        if DATABASE_URL:
+            _conn.execute(
+                f"INSERT INTO replays (signature, ts) VALUES ({PH}, {PH}) ON CONFLICT DO NOTHING",
+                (signature_header, ts or now)
+            )
+        else:
+            _conn.execute(
+                f"INSERT OR IGNORE INTO replays (signature, ts) VALUES ({PH}, {PH})",
+                (signature_header, ts or now)
+            )
         cutoff = now - MAX_AGE
-        _conn.execute("DELETE FROM replays WHERE ts < ?", (cutoff,))
+        _conn.execute(f"DELETE FROM replays WHERE ts < {PH}", (cutoff,))
         _conn.commit()
         return True
     except Exception:
@@ -164,7 +206,7 @@ async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(N
     _id = payload.id or str(uuid.uuid4())
     created_at = datetime.datetime.utcnow().isoformat()
     _conn.execute(
-        "INSERT INTO expenses (id, merchant, date, amount, currency, category, raw_text, source, created_at) VALUES (?,?,?,?,?,?,?,?,?)",
+        f"INSERT INTO expenses (id, merchant, date, amount, currency, category, raw_text, source, created_at) VALUES ({PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH})",
         (_id, payload.merchant, payload.date, payload.amount, payload.currency, payload.category, payload.raw_text, payload.source, created_at)
     )
     _conn.commit()

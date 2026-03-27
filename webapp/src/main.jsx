@@ -4,6 +4,10 @@ import App from './App'
 
 import './styles.css'
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+}
+
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

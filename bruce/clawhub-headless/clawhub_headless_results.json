@@ -1,0 +1,25 @@
+{
+  "generated": true,
+  "results": [
+    {
+      "url": "https://clawhub.ai/skills",
+      "title": "Skills (38,567)",
+      "desc": "Browse the skill library.",
+      "tags": []
+    },
+    {
+      "url": "https://clawhub.ai/skills?focus=search",
+      "title": "Skills (38,567)",
+      "desc": "Browse the skill library.",
+      "tags": []
+    },
+    {
+      "url": "https://clawhub.ai/skills?nonSuspicious=true",
+      "title": "Skills (38,567)",
+      "desc": "Browse the skill library (non-suspicious).",
+      "tags": [
+        "Official"
+      ]
+    }
+  ]
+}
