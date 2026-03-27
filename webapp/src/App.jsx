@@ -60,7 +60,7 @@ function App(){
   }
 
   async function syncFromServer(){
-    const base = prompt('Server base URL for sync (e.g. http://localhost:8000)', 'http://localhost:8000')
+    const base = prompt('Server base URL for sync (e.g. http://localhost:8000)', import.meta.env.VITE_API_URL || 'http://localhost:8000')
     if(!base) return
     try{
       const url = base.replace(/\/+$|\s+/g, '') + '/api/expenses'

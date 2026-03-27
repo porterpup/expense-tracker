@@ -25,6 +25,8 @@ The app is a standard Vite/React project — Vercel detects it automatically wit
 
 After deploy, set `CORS_ORIGINS=https://your-app.vercel.app` in your **backend** Vercel project's environment variables to lock down cross-origin access.
 
+To pre-fill the backend URL in the sync prompt, add `VITE_API_URL=https://your-backend.vercel.app` to your **frontend** Vercel project's environment variables — no code change needed.
+
 ## Features
 
 - **Receipt OCR** — upload a photo; tesseract.js extracts merchant, date, and amount automatically
