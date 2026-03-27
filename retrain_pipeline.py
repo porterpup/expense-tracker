@@ -64,7 +64,6 @@ def prepare_features(df):
     print("STEP 3: Preparing features")
     print("="*60)
     
-    features = []
     
     # Extract temporal features
     if 'date' in df.columns:

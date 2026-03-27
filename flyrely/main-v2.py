@@ -272,7 +272,7 @@ def _extract_features_from_request(
         departure_hour = dep_dt.hour
         day_of_week = dep_dt.weekday()
         month = dep_dt.month
-    except:
+    except Exception:
         departure_hour = 12
         day_of_week = 2
         month = 3

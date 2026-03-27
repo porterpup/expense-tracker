@@ -108,7 +108,7 @@ def fetch_flight_data(days_back=28):
                                             'is_delayed': is_delayed
                                         })
                                         day_flights += 1
-                                except:
+                                except Exception:
                                     pass
                     
                 elif response.status_code == 429:
