@@ -203,21 +203,11 @@ class IngestPayload(BaseModel):
     id: Optional[str] = None
 
 
-@app.post("/debug/echo")
-async def debug_echo(request: Request):
-    body = await request.body()
-    return Response(content=body, media_type="application/json")
-
-
 @app.post("/webhook/ingest")
-async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(None), x_timestamp: Optional[str] = Header(None), x_debug_bypass: Optional[str] = Header(None)):
+async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(None), x_timestamp: Optional[str] = Header(None)):
     body = await request.body()
-    # Allow bypass for debugging when X-Debug-Bypass: 1 present (temporary)
-    if x_debug_bypass == '1':
-        pass
-    else:
-        if not verify_signature(body, x_signature, x_timestamp):
-            raise HTTPException(status_code=401, detail="Invalid or missing signature")
+    if not verify_signature(body, x_signature, x_timestamp):
+        raise HTTPException(status_code=401, detail="Invalid or missing signature")
     try:
         payload_json = await request.json()
     except Exception:
