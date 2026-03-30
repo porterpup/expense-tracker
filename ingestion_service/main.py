@@ -203,6 +203,12 @@ class IngestPayload(BaseModel):
     id: Optional[str] = None
 
 
+@app.post("/debug/echo")
+async def debug_echo(request: Request):
+    body = await request.body()
+    return Response(content=body, media_type="application/json")
+
+
 @app.post("/webhook/ingest")
 async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(None), x_timestamp: Optional[str] = Header(None)):
     body = await request.body()
