@@ -10,13 +10,18 @@ Environment variables (Vercel project: ingestion_service)
 - VITE_API_URL: set in webapp project to backend URL
 
 Secrets:
-- New WEBHOOK_SECRET saved at /tmp/ve_webhook_secret_rotated.txt on this machine. Copy and update any producers.
+- WEBHOOK_SECRET is stored in Vercel production env (rotated). Do NOT keep local copies.
 
 Runbook:
-- To rotate secret: openssl rand -hex 32 > /tmp/ve_webhook_secret_rotated.txt; vercel env rm WEBHOOK_SECRET production; vercel env add WEBHOOK_SECRET production "$(cat /tmp/ve_webhook_secret_rotated.txt)"
+- To rotate secret (recommended method, no local file):
+  1) SECRET=$(openssl rand -hex 32)
+  2) vercel env rm WEBHOOK_SECRET production --cwd ingestion_service --yes
+  3) vercel env add WEBHOOK_SECRET production --value "$SECRET" --cwd ingestion_service --yes
+  4) vercel --cwd ingestion_service --prod
 - To redeploy backend: vercel --cwd ingestion_service --prod
 - To check health: GET /health (returns {"status":"ok"})
 
 Notes:
 - DB uses Neon Postgres; tables created automatically on first run.
 - Ensure only authorized producers can post to /webhook/ingest using the WEBHOOK_SECRET HMAC.
+- See PRODUCTION_RUNBOOK.md for full rotation and distribution guidance.
