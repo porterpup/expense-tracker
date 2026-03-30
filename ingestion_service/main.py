@@ -48,8 +48,8 @@ _RATE_STORE = {}
 
 @app.middleware("http")
 async def rate_limit_middleware(request: Request, call_next):
-    # Apply only to the ingestion webhook path
-    if request.url.path == "/webhook/ingest":
+    # Apply only to the ingestion webhook and client ingest paths
+    if request.url.path in ("/webhook/ingest", "/api/client_ingest"):
         client_ip = request.client.host if request.client else "unknown"
         now = int(datetime.datetime.utcnow().timestamp())
         window_start = now - RATE_WINDOW
@@ -122,10 +122,20 @@ def init_db():
             category TEXT,
             raw_text TEXT,
             source TEXT,
-            created_at TEXT
+            created_at TEXT,
+            receipt_blob TEXT
         )
         """
     )
+    # Ensure receipt_blob column exists on existing tables (ALTER TABLE if needed)
+    try:
+        _conn.execute("SELECT receipt_blob FROM expenses LIMIT 1")
+    except Exception:
+        try:
+            _conn.execute("ALTER TABLE expenses ADD COLUMN receipt_blob TEXT")
+        except Exception:
+            pass
+
     _conn.execute(
         """
         CREATE TABLE IF NOT EXISTS replays (
@@ -201,6 +211,7 @@ class IngestPayload(BaseModel):
     raw_text: Optional[str] = None
     source: Optional[str] = "agent"
     id: Optional[str] = None
+    receipt_blob: Optional[str] = None
 
 
 @app.post("/webhook/ingest")
@@ -222,8 +233,46 @@ async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(N
     if _conn is None:
         raise HTTPException(status_code=503, detail="Database not available")
     _conn.execute(
-        f"INSERT INTO expenses (id, merchant, date, amount, currency, category, raw_text, source, created_at) VALUES ({PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH})",
-        (_id, payload.merchant, payload.date, payload.amount, payload.currency, payload.category, payload.raw_text, payload.source, created_at)
+        f"INSERT INTO expenses (id, merchant, date, amount, currency, category, raw_text, source, created_at, receipt_blob) VALUES ({PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH})",
+        (_id, payload.merchant, payload.date, payload.amount, payload.currency, payload.category, payload.raw_text, payload.source, created_at, getattr(payload, 'receipt_blob', None))
+    )
+    _conn.commit()
+    return {"id": _id}
+
+
+@app.post("/api/client_ingest")
+async def client_ingest(request: Request):
+    # Client-side ingestion endpoint for the PWA. Simple checks: Origin + CLIENT_ID header.
+    origin = request.headers.get("origin")
+    server_client_id = os.getenv("CLIENT_ID")
+    # Verify origin is allowed
+    if origin not in CORS_ORIGINS:
+        raise HTTPException(status_code=403, detail="Origin not allowed")
+    header_id = request.headers.get("x-client-id")
+    if not server_client_id or header_id != server_client_id:
+        raise HTTPException(status_code=401, detail="Invalid client id")
+    # Optional password protection: if CLIENT_PASSWORD is set, require X-Client-Auth header
+    server_password = os.getenv("CLIENT_PASSWORD")
+    if server_password:
+        header_auth = request.headers.get("x-client-auth")
+        if not header_auth or header_auth != server_password:
+            raise HTTPException(status_code=401, detail="Invalid client auth")
+    try:
+        payload_json = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON")
+    try:
+        payload = IngestPayload(**payload_json)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid payload: {e}")
+    _id = payload.id or str(uuid.uuid4())
+    created_at = datetime.datetime.utcnow().isoformat()
+    _init_conn_and_db()
+    if _conn is None:
+        raise HTTPException(status_code=503, detail="Database not available")
+    _conn.execute(
+        f"INSERT INTO expenses (id, merchant, date, amount, currency, category, raw_text, source, created_at, receipt_blob) VALUES ({PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH})",
+        (_id, payload.merchant, payload.date, payload.amount, payload.currency, payload.category, payload.raw_text, payload.source, created_at, getattr(payload, 'receipt_blob', None))
     )
     _conn.commit()
     return {"id": _id}

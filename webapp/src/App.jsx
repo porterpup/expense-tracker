@@ -4,13 +4,30 @@ import { addExpense, listExpenses } from './idb'
 
 function App(){
   const [image, setImage] = useState(null)
+  const [imageFile, setImageFile] = useState(null)
   const [ocrText, setOcrText] = useState('')
   const [merchant, setMerchant] = useState('')
   const [date, setDate] = useState('')
   const [amount, setAmount] = useState('')
+  const [category, setCategory] = useState('')
   const [expenses, setExpenses] = useState([])
+  const [clientAuth, setClientAuth] = useState(() => sessionStorage.getItem('client_auth') || '')
+  const [authRequired, setAuthRequired] = useState(false)
 
-  useEffect(()=>{ loadExpenses() }, [])
+  useEffect(()=>{ loadExpenses(); checkAuthRequired() }, [])
+
+  async function checkAuthRequired(){
+    try{
+      const base = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const resp = await fetch(base.replace(/\/+$/,'') + '/api/auth_required')
+      if(resp.ok){
+        const j = await resp.json()
+        setAuthRequired(!!j.required)
+      }
+    }catch(e){
+      // ignore
+    }
+  }
 
   async function loadExpenses(){
     const es = await listExpenses()
@@ -22,6 +39,7 @@ function App(){
     if(!file) return
     const url = URL.createObjectURL(file)
     setImage(url)
+    setImageFile(file)
     setOcrText('Recognizing...')
     try{
       const text = await recognizeImage(file)
@@ -40,22 +58,74 @@ function App(){
   }
 
   async function save(){
+    // generate a client id for local item so local and server can be correlated if desired
+    const id = Date.now().toString() + '-' + Math.random().toString(36).slice(2,9)
+
+    // read image as base64 if available
+    let receipt_blob = null
+    if(imageFile){
+      try{
+        receipt_blob = await new Promise((resolve, reject)=>{
+          const fr = new FileReader()
+          fr.onload = ()=>{
+            const dataUrl = fr.result
+            // strip data:...base64,
+            const m = String(dataUrl).match(/base64,(.*)$/)
+            resolve(m ? m[1] : null)
+          }
+          fr.onerror = reject
+          fr.readAsDataURL(imageFile)
+        })
+      }catch(e){
+        console.warn('Failed to read image for upload', e)
+      }
+    }
+
     const rec = {
+      id,
       merchant,
       date,
       amount: parseFloat((amount||'0').toString().replace(',','.'))||0,
       currency: 'USD',
-      category: null,
+      category: category || null,
       raw_text: ocrText,
       source: 'pwa',
-      created_at: new Date().toISOString()
+      created_at: new Date().toISOString(),
+      receipt_blob
     }
     await addExpense(rec)
+
+    // attempt to push to server (best-effort)
+    (async ()=>{
+      try{
+        const base = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+        const url = base.replace(/\/+$/,'') + '/api/client_ingest'
+        const headers = {
+          'Content-Type': 'application/json',
+          'X-Client-Id': import.meta.env.VITE_CLIENT_ID || ''
+        }
+        const auth = sessionStorage.getItem('client_auth') || ''
+        if(auth) headers['X-Client-Auth'] = auth
+        const res = await fetch(url, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify(rec)
+        })
+        if(!res.ok){
+          console.warn('Sync failed', await res.text())
+        }
+      }catch(err){
+        console.warn('Sync error', err)
+      }
+    })()
+
     setMerchant('')
     setDate('')
     setAmount('')
+    setCategory('')
     setOcrText('')
     setImage(null)
+    setImageFile(null)
     loadExpenses()
   }
 
@@ -108,7 +178,21 @@ function App(){
   return (
     <div style={{padding:16,maxWidth:720,margin:'0 auto'}}>
       <h1>Expense Tracker (PWA)</h1>
-      <input type="file" accept="image/*" onChange={onFile} />
+
+      {/* Simple auth modal */}
+      {authRequired && !clientAuth && (
+        <div style={{position:'fixed',left:0,top:0,right:0,bottom:0,background:'rgba(0,0,0,0.5)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <div style={{background:'#fff',padding:20,borderRadius:8,maxWidth:400,width:'90%'}}>
+            <h3>Enter app password</h3>
+            <input type="password" placeholder="password" onChange={e=>setClientAuth(e.target.value)} style={{width:'100%'}} />
+            <div style={{marginTop:8,textAlign:'right'}}>
+              <button onClick={()=>{ sessionStorage.setItem('client_auth', clientAuth); window.location.reload();}}>Submit</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <input type="file" accept="image/*" capture="environment" onChange={onFile} />
       {image && <img src={image} alt="preview" style={{maxWidth:'100%',marginTop:8}}/>}
 
       <div style={{marginTop:8}}>
@@ -126,6 +210,18 @@ function App(){
           <input value={amount} onChange={e=>setAmount(e.target.value)} />
         </label>
       </div>
+      <div>
+        <label>Category<br/>
+          <select value={category} onChange={e=>setCategory(e.target.value)}>
+            <option value="">(None)</option>
+            <option value="office">Office</option>
+            <option value="meals">Meals</option>
+            <option value="travel">Travel</option>
+            <option value="supplies">Supplies</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </div>
       <div style={{marginTop:8}}>
         <button onClick={save}>Save</button>
         <button onClick={exportCsv} style={{marginLeft:8}}>Export CSV</button>
@@ -134,7 +230,7 @@ function App(){
 
       <h2>Saved expenses</h2>
       <ul>
-        {expenses.map(e=> <li key={e.id}>{e.merchant} — {e.amount} — {e.date} {e.source?`(${e.source})`:''}</li>)}
+        {expenses.map(e=> <li key={e.id}>{e.merchant} — {e.amount} — {e.date} {e.category?`[${e.category}]`:''} {e.source?`(${e.source})`:''}</li>)}
       </ul>
 
       <h3>OCR text</h3>
