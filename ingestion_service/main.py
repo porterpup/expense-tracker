@@ -278,6 +278,12 @@ async def client_ingest(request: Request):
     return {"id": _id}
 
 
+@app.get("/api/auth_required")
+def api_auth_required():
+    # Returns whether the server requires a client password (CLIENT_PASSWORD env)
+    return {"required": bool(os.getenv("CLIENT_PASSWORD"))}
+
+
 @app.get("/api/expenses")
 def api_list_expenses():
     _init_conn_and_db()
