@@ -94,7 +94,20 @@ class _DbConn:
         self._raw.commit()
 
 
-_conn = _DbConn()
+_conn = None
+_init_exception = None
+
+def _init_conn_and_db():
+    global _conn, _init_exception
+    if _conn is not None:
+        return
+    try:
+        _conn = _DbConn()
+        # Initialize DB schema when connection established
+        init_db()
+    except Exception as e:
+        _conn = None
+        _init_exception = e
 
 
 def init_db():
@@ -122,9 +135,6 @@ def init_db():
         """
     )
     _conn.commit()
-
-
-init_db()
 
 
 MAX_AGE = int(os.getenv("WEBHOOK_MAX_AGE", "300"))  # seconds
@@ -156,11 +166,14 @@ def verify_signature(body: bytes, signature_header: Optional[str], timestamp_hea
         ok = hmac.compare_digest(expected_body_only, signature_header) or (expected_with_ts and hmac.compare_digest(expected_with_ts, signature_header))
         if not ok:
             return False
-        # Persistent replay protection
+        # Replay protection only when DB available
+        _init_conn_and_db()
+        if _conn is None:
+            # Can't check replays without DB; skip replay protection
+            return ok
         cur = _conn.execute(f"SELECT ts FROM replays WHERE signature = {PH}", (signature_header,))
         if cur.fetchone():
             return False
-        # Insert signature with ON CONFLICT DO NOTHING (Postgres) or INSERT OR IGNORE (SQLite)
         if DATABASE_URL:
             _conn.execute(
                 f"INSERT INTO replays (signature, ts) VALUES ({PH}, {PH}) ON CONFLICT DO NOTHING",
@@ -205,6 +218,9 @@ async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(N
         raise HTTPException(status_code=400, detail=f"Invalid payload: {e}")
     _id = payload.id or str(uuid.uuid4())
     created_at = datetime.datetime.utcnow().isoformat()
+    _init_conn_and_db()
+    if _conn is None:
+        raise HTTPException(status_code=503, detail="Database not available")
     _conn.execute(
         f"INSERT INTO expenses (id, merchant, date, amount, currency, category, raw_text, source, created_at) VALUES ({PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH},{PH})",
         (_id, payload.merchant, payload.date, payload.amount, payload.currency, payload.category, payload.raw_text, payload.source, created_at)
@@ -215,6 +231,9 @@ async def webhook_ingest(request: Request, x_signature: Optional[str] = Header(N
 
 @app.get("/api/expenses")
 def api_list_expenses():
+    _init_conn_and_db()
+    if _conn is None:
+        return {"expenses": []}
     cur = _conn.execute("SELECT * FROM expenses ORDER BY created_at DESC")
     rows = [dict(r) for r in cur.fetchall()]
     return {"expenses": rows}
@@ -222,6 +241,12 @@ def api_list_expenses():
 
 @app.get("/api/export")
 def api_export_csv():
+    _init_conn_and_db()
+    if _conn is None:
+        output = io.StringIO()
+        writer = csv.writer(output)
+        writer.writerow([ "id","merchant","date","amount","currency","category","raw_text","source","created_at" ])
+        return Response(content=output.getvalue(), media_type="text/csv", headers={"Content-Disposition":"attachment; filename=expenses.csv"})
     cur = _conn.execute("SELECT * FROM expenses ORDER BY created_at DESC")
     rows = cur.fetchall()
     output = io.StringIO()
@@ -234,4 +259,7 @@ def api_export_csv():
 
 @app.get("/health")
 def health():
+    _init_conn_and_db()
+    if _conn is None:
+        return Response(content='{"status":"degraded","db":"unavailable"}', media_type="application/json", status_code=503)
     return {"status":"ok"}
