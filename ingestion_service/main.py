@@ -289,7 +289,7 @@ def api_list_expenses():
     _init_conn_and_db()
     if _conn is None:
         return {"expenses": []}
-    cur = _conn.execute("SELECT * FROM expenses ORDER BY created_at DESC")
+    cur = _conn.execute("SELECT id, merchant, date, amount, currency, category, raw_text, source, created_at FROM expenses ORDER BY created_at DESC")
     rows = [dict(r) for r in cur.fetchall()]
     return {"expenses": rows}
 
