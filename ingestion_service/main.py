@@ -296,6 +296,25 @@ def api_list_expenses():
 
 @app.get("/api/export")
 def api_export_csv():
+    pass
+
+
+@app.get("/api/receipt/{expense_id}")
+def api_get_receipt(expense_id: str):
+    _init_conn_and_db()
+    if _conn is None:
+        raise HTTPException(status_code=503, detail="Database not available")
+    cur = _conn.execute("SELECT receipt_blob FROM expenses WHERE id = " + (PH), (expense_id,))
+    row = cur.fetchone()
+    if not row or not row[0]:
+        raise HTTPException(status_code=404, detail="Receipt not found")
+    blob = row[0]
+    # return as JSON data-url to keep API simple
+    return {"data_url": f"data:image/jpeg;base64,{blob}"}
+
+
+@app.get("/api/export")
+def api_export_csv():
     _init_conn_and_db()
     if _conn is None:
         output = io.StringIO()
