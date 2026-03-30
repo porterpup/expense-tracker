@@ -27,3 +27,6 @@ Notes:
 - DB uses Neon Postgres; tables created automatically on first run.
 - Ensure only authorized producers can post to /webhook/ingest using the WEBHOOK_SECRET HMAC.
 - See PRODUCTION_RUNBOOK.md for full rotation and distribution guidance.
+
+Password note:
+- CLIENT_PASSWORD has been set in Vercel production for ingestion_service (no local copy). To rotate or change, use: vercel env add CLIENT_PASSWORD production "<new-password>" --cwd ingestion_service --yes
