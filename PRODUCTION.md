@@ -6,6 +6,8 @@ Backend:  https://ingestionservice.vercel.app
 Environment variables (Vercel project: ingestion_service)
 - DATABASE_URL: injected by Neon (production)
 - WEBHOOK_SECRET: HMAC secret for /webhook/ingest (rotated)
+- CLIENT_ID: client id used by the PWA for automatic sync
+- CLIENT_PASSWORD: (optional) if set, the frontend requires a password; set this via vercel env add CLIENT_PASSWORD production "<password>"
 - CORS_ORIGINS: set to frontend URL
 - VITE_API_URL: set in webapp project to backend URL
 
