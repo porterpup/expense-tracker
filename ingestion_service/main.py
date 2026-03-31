@@ -73,9 +73,22 @@ class _DbConn:
 
     def __init__(self):
         if DATABASE_URL:
-            import psycopg2  # type: ignore
-            self._raw = psycopg2.connect(DATABASE_URL)
-            self._is_pg = True
+            try:
+                import psycopg2  # type: ignore
+                self._raw = psycopg2.connect(DATABASE_URL)
+                self._is_pg = True
+            except Exception as e:
+                # If Postgres connection fails, fall back to SQLite so the service remains available.
+                # Log the exception to stderr so Vercel logs capture the cause.
+                try:
+                    import sys
+                    print(f"WARNING: Postgres connection failed, falling back to SQLite: {e}", file=sys.stderr)
+                except Exception:
+                    pass
+                ensure_db_dir(DB_PATH)
+                self._raw = sqlite3.connect(DB_PATH, check_same_thread=False)
+                self._raw.row_factory = sqlite3.Row
+                self._is_pg = False
         else:
             ensure_db_dir(DB_PATH)
             self._raw = sqlite3.connect(DB_PATH, check_same_thread=False)
