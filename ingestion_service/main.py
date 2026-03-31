@@ -24,7 +24,9 @@ from pydantic import BaseModel
 
 # Config
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DB_PATH = os.getenv("INGEST_DB_PATH", os.path.join(BASE_DIR, "data", "expenses.db"))
+# On serverless platforms (Vercel) use /tmp as writable storage for SQLite fallback.
+DEFAULT_DB_PATH = "/tmp/expenses.db" if os.getenv("VERCEL") else os.path.join(BASE_DIR, "data", "expenses.db")
+DB_PATH = os.getenv("INGEST_DB_PATH", DEFAULT_DB_PATH)
 WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
 DATABASE_URL = os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL")
 PH = "%s" if DATABASE_URL else "?"  # SQL placeholder differs between Postgres and SQLite
