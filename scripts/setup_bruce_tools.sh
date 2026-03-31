@@ -62,15 +62,17 @@ for p in /usr/local/bin/vercel /opt/homebrew/bin/vercel /usr/bin/vercel; do
   if [[ -x "$p" ]]; then VERCEL_BIN="$p"; break; fi
 done
 
-# Install Vercel CLI globally if not found
-if [[ -z "$VERCEL_BIN" ]]; then
-  echo "→ Installing Vercel CLI via npm..."
-  npm install -g vercel --quiet
-  VERCEL_BIN="$(which vercel 2>/dev/null || echo '/usr/local/bin/vercel')"
-  echo "  Vercel CLI installed at: ${VERCEL_BIN}"
-else
-  echo "✓ Vercel CLI found: ${VERCEL_BIN}"
+# Use npx vercel (auto-downloads/caches; avoids global install path issues with sudo)
+VERCEL_BIN=""
+NPX_BIN=""
+for p in /usr/local/bin/npx /opt/homebrew/bin/npx; do
+  if [[ -x "$p" ]]; then NPX_BIN="$p"; break; fi
+done
+if [[ -z "$NPX_BIN" ]]; then
+  echo "ERROR: npx not found. Install Node.js first." >&2
+  exit 1
 fi
+echo "✓ npx found: ${NPX_BIN} (will use npx vercel for vercel-oc)"
 
 if [[ -z "$GH_BIN" ]]; then
   echo "ERROR: gh CLI not found. Install with: brew install gh" >&2
@@ -95,8 +97,13 @@ echo "  ✓ gh-oc"
 cat > "${OC_BIN}/vercel-oc" <<WRAPPER
 #!/bin/bash
 export HOME=/var/lib/openclaw
-export VERCEL_TOKEN="\$(cat /var/lib/openclaw/.vercel-token 2>/dev/null)"
-exec ${VERCEL_BIN} "\$@"
+TOKEN_FILE="/var/lib/openclaw/.vercel-token"
+if [ -f "\$TOKEN_FILE" ]; then
+  exec ${NPX_BIN} --yes vercel --token "\$(cat \$TOKEN_FILE)" "\$@"
+else
+  echo "ERROR: Vercel token not found at \$TOKEN_FILE" >&2
+  exit 1
+fi
 WRAPPER
 chmod 755 "${OC_BIN}/vercel-oc"
 chown openclaw:staff "${OC_BIN}/vercel-oc"
@@ -106,7 +113,7 @@ echo "  ✓ vercel-oc"
 echo "→ Storing Vercel token..."
 printf '%s' "${VERCEL_TOKEN}" > "${VERCEL_TOKEN_FILE}"
 chmod 600 "${VERCEL_TOKEN_FILE}"
-chown root:staff "${VERCEL_TOKEN_FILE}"
+chown openclaw:staff "${VERCEL_TOKEN_FILE}"
 echo "  ✓ Token stored at ${VERCEL_TOKEN_FILE}"
 
 # ── Configure gh auth for OpenClaw user ──────────────────────────────────────
